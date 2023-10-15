@@ -22,6 +22,7 @@ class myapp extends StatelessWidget {
 }
 
 class myhomepage extends StatefulWidget {
+  
   const myhomepage({super.key});
 
   @override
@@ -29,6 +30,7 @@ class myhomepage extends StatefulWidget {
 }
 
 class _myhomepageState extends State<myhomepage> {
+  
   var no1controller = TextEditingController();
   var no2controller = TextEditingController();
   var result = '';
@@ -66,28 +68,35 @@ class _myhomepageState extends State<myhomepage> {
                             var sum = no1 + no2;
                             result = 'The sum 0f $no1 and $no2 is $sum';
                             setState(() {});
-                      }, child: Text('add')),
-                      ElevatedButton(onPressed: () {
-                        var no1 = int.parse(no1controller.text.toString());
+                          },
+                          child: Text('add')),
+                      ElevatedButton(
+                          onPressed: () {
+                            var no1 = int.parse(no1controller.text.toString());
                             var no2 = int.parse(no2controller.text.toString());
                             var sum = no1 - no2;
                             result = 'The diffrence 0f $no1 and $no2 is $sum';
                             setState(() {});
-                      }, child: Text('sub')),
-                      ElevatedButton(onPressed: () {
-                        var no1 = int.parse(no1controller.text.toString());
+                          },
+                          child: Text('sub')),
+                      ElevatedButton(
+                          onPressed: () {
+                            var no1 = int.parse(no1controller.text.toString());
                             var no2 = int.parse(no2controller.text.toString());
                             var sum = no1 * no2;
                             result = 'The product 0f $no1 and $no2 is $sum';
                             setState(() {});
-                      }, child: Text('mult')),
-                      ElevatedButton(onPressed: () {
-                        var no1 = int.parse(no1controller.text.toString());
+                          },
+                          child: Text('mult')),
+                      ElevatedButton(
+                          onPressed: () {
+                            var no1 = int.parse(no1controller.text.toString());
                             var no2 = int.parse(no2controller.text.toString());
                             var sum = no1 / no2;
                             result = 'The division 0f $no1 and $no2 is $sum';
                             setState(() {});
-                      }, child: Text('div')),
+                          },
+                          child: Text('div')),
                     ],
                   ),
                 ),
